@@ -4,31 +4,36 @@
 /* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
+    background: linear-gradient(to bottom, #87CEFA, #4682B4);
     color: #343a40;
+    line-height: 1.6;
 }
 
 header {
     background-color: #007bff;
     color: #fff;
-    padding: 20px 0;
     text-align: center;
+    padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    margin: 0;
     font-size: 2.5em;
+    margin: 0;
     font-weight: 700;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 5px 0;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 10px 0 0;
+    margin: 15px 0 0;
     display: flex;
     justify-content: center;
 }
@@ -41,7 +46,6 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 700;
-    font-size: 1.1em;
     transition: color 0.3s ease;
 }
 
@@ -51,43 +55,39 @@ nav ul li a:hover {
 
 /* Section Styles */
 section {
-    padding: 40px 20px;
-    margin: 20px 0;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 40px 20px;
 }
 
 section h2 {
-    color: #007bff;
-    font-size: 2em;
-    margin-bottom: 20px;
     text-align: center;
+    color: #007bff;
+    font-size: 2.5em;
+    margin-bottom: 30px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
 
-/* About Section */
-#about p {
-    font-size: 1.1em;
-    text-align: center;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+.profile-image {
+    display: block;
+    max-width: 150px;
+    margin: 20px auto 0;
+    border-radius: 50%;
+    border: 4px solid #007bff;
 }
 
-/* Projects Section */
 #projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
 .project {
-    background-color: #ffffff;
+    background-color: #f8f9fa;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -101,19 +101,79 @@ section h2 {
 
 .project h3 {
     color: #343a40;
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin-bottom: 10px;
 }
 
 .project p {
-    font-size: 1em;
+    font-size: 1.1em;
     color: #6c757d;
 }
 
-/* Contact Section */
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #0056b3;
+}
+
+.project-image {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    text-align: center;
+}
+
+.skills-list li {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.skills-list li:hover {
+    background-color: #0056b3;
+}
+
+.experience-item {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item h3 {
+    color: #343a40;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.experience-item p {
+    font-size: 1.1em;
+    color: #6c757d;
+}
+
 #contact p {
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
 #contact a {
@@ -127,13 +187,13 @@ section h2 {
     color: #0056b3;
 }
 
-/* Footer Styles */
 footer {
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
     background-color: #343a40;
     color: #fff;
     font-size: 0.9em;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 footer p {
