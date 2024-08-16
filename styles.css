@@ -6,9 +6,12 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #87CEFA, #4682B4);
+    background-color: #f8f9fa;
+    background-image: linear-gradient(to bottom, #87CEFA, #4682B4), url('images/geometric-pattern.png');
+    background-size: cover;
     color: #343a40;
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -55,12 +58,21 @@ nav ul li a:hover {
 
 /* Section Styles */
 section {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 40px auto;
     max-width: 1000px;
     padding: 40px 20px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+section.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 section h2 {
@@ -197,12 +209,23 @@ footer {
 }
 
 footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     margin: 0;
 }
 
 footer p a {
     color: #007bff;
-    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+footer p a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
 }
 
 footer p a:hover {
