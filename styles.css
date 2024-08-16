@@ -1,19 +1,47 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* General Styles */
+/* Animated Gradient Background */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
-    background-image: linear-gradient(to bottom, #87CEFA, #4682B4), url('images/geometric-pattern.png');
-    background-size: cover;
+    background: linear-gradient(120deg, #007bff, #4682B4, #87CEFA, #5DADE2);
+    background-size: 300% 300%;
+    animation: gradientBackground 15s ease infinite;
     color: #343a40;
     line-height: 1.6;
     scroll-behavior: smooth;
 }
 
+/* Gradient Animation Keyframes */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Overlay for Geometric Patterns */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/geometric-pattern.png'); /* Replace with your pattern image */
+    opacity: 0.15; /* Adjust for more or less visibility */
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Header Styling */
 header {
     background-color: #007bff;
     color: #fff;
@@ -33,6 +61,7 @@ header p {
     margin: 5px 0;
 }
 
+/* Navigation Styling */
 nav ul {
     list-style: none;
     padding: 0;
@@ -56,7 +85,7 @@ nav ul li a:hover {
     color: #ffdd57;
 }
 
-/* Section Styles */
+/* Section Styling */
 section {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
@@ -70,11 +99,13 @@ section {
     transition: opacity 1s ease, transform 1s ease;
 }
 
+/* Section Scroll Animation Activation */
 section.active {
     opacity: 1;
     transform: translateY(0);
 }
 
+/* Section Headings */
 section h2 {
     text-align: center;
     color: #007bff;
@@ -84,6 +115,7 @@ section h2 {
     letter-spacing: 1.5px;
 }
 
+/* Profile Image */
 .profile-image {
     display: block;
     max-width: 150px;
@@ -92,12 +124,14 @@ section h2 {
     border: 4px solid #007bff;
 }
 
+/* Projects Grid */
 #projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
+/* Project Card Styling */
 .project {
     background-color: #f8f9fa;
     padding: 20px;
@@ -122,6 +156,7 @@ section h2 {
     color: #6c757d;
 }
 
+/* Project Links */
 .project-link {
     display: inline-block;
     margin-top: 15px;
@@ -135,12 +170,14 @@ section h2 {
     color: #0056b3;
 }
 
+/* Project Images */
 .project-image {
     max-width: 100%;
     border-radius: 8px;
     margin-top: 15px;
 }
 
+/* Skills List */
 .skills-list {
     list-style-type: none;
     padding: 0;
@@ -163,6 +200,7 @@ section h2 {
     background-color: #0056b3;
 }
 
+/* Experience Section */
 .experience-item {
     background-color: #f8f9fa;
     padding: 20px;
@@ -182,6 +220,7 @@ section h2 {
     color: #6c757d;
 }
 
+/* Contact Section */
 #contact p {
     text-align: center;
     font-size: 1.2em;
@@ -199,6 +238,7 @@ section h2 {
     color: #0056b3;
 }
 
+/* Footer Styling */
 footer {
     text-align: center;
     padding: 20px;
