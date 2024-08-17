@@ -1,99 +1,38 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Geometric Gradient Background */
+/* Geometric Background using SVG and Palette Colors */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #007bff 25%, transparent 25%) -50px 0,
-                linear-gradient(225deg, #007bff 25%, transparent 25%) -50px 0,
-                linear-gradient(315deg, #007bff 25%, transparent 25%),
-                linear-gradient(45deg, #007bff 25%, transparent 25%);
-    background-size: 100px 100px;
-    background-color: #4682B4;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,0 100,0 50,50" fill="%2396A8FA"/><polygon points="0,0 50,50 0,100" fill="%23A08DFE"/><polygon points="100,0 100,100 50,50" fill="%239988FA"/><polygon points="0,100 100,100 50,50" fill="%23A68DFD"/></svg>') no-repeat center center fixed;
+    background-size: cover;
     color: #343a40;
     line-height: 1.6;
     scroll-behavior: smooth;
-    background-blend-mode: overlay;
 }
 
-/* Gradient Animation Keyframes */
-@keyframes gradientBackground {
+/* Background Animation */
+@keyframes moveBackground {
     0% {
-        background-position: 0% 50%;
+        background-position: 0% 0%;
     }
     50% {
-        background-position: 100% 50%;
+        background-position: 100% 100%;
     }
     100% {
-        background-position: 0% 50%;
+        background-position: 0% 0%;
     }
 }
 
-/* Overlay for Additional Geometric Pattern */
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px),
-                      linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px);
-    background-size: 100px 100px;
-    opacity: 0.1; /* Adjust for more or less visibility */
-    pointer-events: none;
-    z-index: -1;
-}
-
-/* Header Styling */
-header {
-    background-color: #007bff;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin: 0;
-    font-weight: 700;
-}
-
-header p {
-    font-size: 1.2em;
-    margin: 5px 0;
-}
-
-/* Navigation Styling */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 15px 0 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #ffdd57;
+body {
+    animation: moveBackground 15s ease-in-out infinite;
 }
 
 /* Section Styling */
 section {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.85); /* Slightly transparent to let the background show through */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 40px auto;
@@ -114,7 +53,7 @@ section.active {
 /* Section Headings */
 section h2 {
     text-align: center;
-    color: #007bff;
+    color: #9B8EFD; /* Updated to match the palette */
     font-size: 2.5em;
     margin-bottom: 30px;
     text-transform: uppercase;
@@ -127,7 +66,7 @@ section h2 {
     max-width: 150px;
     margin: 20px auto 0;
     border-radius: 50%;
-    border: 4px solid #007bff;
+    border: 4px solid #A18EFA; /* Updated to match the palette */
 }
 
 /* Projects Section Grid */
@@ -154,7 +93,7 @@ section h2 {
 }
 
 .project-card h3 {
-    color: #343a40;
+    color: #5A4CC9; /* Updated to match the palette */
     font-size: 1.5em;
     margin-bottom: 10px;
 }
@@ -184,7 +123,7 @@ section h2 {
 }
 
 .skills-list li {
-    background-color: #007bff;
+    background-color: #8988FE; /* Updated to match the palette */
     color: #fff;
     padding: 10px;
     border-radius: 5px;
@@ -193,7 +132,7 @@ section h2 {
 }
 
 .skills-list li:hover {
-    background-color: #0056b3;
+    background-color: #7E76C9; /* Updated to match the palette */
 }
 
 /* Experience Section */
@@ -206,7 +145,7 @@ section h2 {
 }
 
 .experience-item h3 {
-    color: #343a40;
+    color: #7064B8; /* Updated to match the palette */
     font-size: 1.8em;
     margin-bottom: 10px;
 }
@@ -224,14 +163,14 @@ section h2 {
 }
 
 #contact a {
-    color: #007bff;
+    color: #9D8EF8; /* Updated to match the palette */
     text-decoration: none;
     font-weight: 700;
     transition: color 0.3s ease;
 }
 
 #contact a:hover {
-    color: #0056b3;
+    color: #7F7DBF; /* Updated to match the palette */
 }
 
 /* Footer Styling */
@@ -253,7 +192,7 @@ footer p {
 }
 
 footer p a {
-    color: #007bff;
+    color: #9D8EF8; /* Updated to match the palette */
     display: inline-flex;
     align-items: center;
 }
