@@ -1,13 +1,16 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* Geometric Background using SVG and Palette Colors */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,0 100,0 50,50" fill="%2396A8FA"/><polygon points="0,0 50,50 0,100" fill="%23A08DFE"/><polygon points="100,0 100,100 50,50" fill="%239988FA"/><polygon points="0,100 100,100 50,50" fill="%23A68DFD"/></svg>') no-repeat center center fixed;
-    background-size: cover;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><polygon points="0,0 50,0 25,25" fill="%2396A8FA"/><polygon points="50,0 100,0 75,25" fill="%23A08DFE"/><polygon points="100,0 100,50 75,25" fill="%239988FA"/><polygon points="100,50 100,100 75,75" fill="%23A68DFD"/><polygon points="100,100 50,100 75,75" fill="%23B494FE"/><polygon points="50,100 0,100 25,75" fill="%23A49DFA"/><polygon points="0,100 0,50 25,75" fill="%239D88FD"/><polygon points="0,50 0,0 25,25" fill="%23878DFA"/></svg>') no-repeat center center fixed;
+    background-size: 200% 200%;
     color: #343a40;
     line-height: 1.6;
     scroll-behavior: smooth;
@@ -27,8 +30,9 @@ body {
 }
 
 body {
-    animation: moveBackground 15s ease-in-out infinite;
+    animation: moveBackground 20s ease-in-out infinite;
 }
+
 
 /* Header Styling */
 header {
