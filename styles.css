@@ -32,7 +32,7 @@ body {
 
 /* Header Styling */
 header {
-    background-color: #007bff;
+    background-color: #9D8EF8; /* Updated to match the palette */
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -71,7 +71,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffdd57;
+    color: #D8C1FD; /* Updated hover color to match palette */
 }
 
 /* Section Styling */
