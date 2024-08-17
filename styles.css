@@ -1,19 +1,13 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 /* Geometric Background using SVG and Palette Colors */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="100%" height="100%"><defs><pattern id="triangles" width="50" height="50" patternUnits="userSpaceOnUse"><polygon points="25,0 50,50 0,50" fill="%2396A8FA"/><polygon points="25,50 50,100 0,100" fill="%23A08DFE"/></pattern></defs><rect width="100%" height="100%" fill="url(%23triangles)"/></svg>') no-repeat center center fixed;
-    background-size: 300px 300px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,0 100,0 50,50" fill="%2396A8FA"/><polygon points="0,0 50,50 0,100" fill="%23A08DFE"/><polygon points="100,0 100,100 50,50" fill="%239988FA"/><polygon points="0,100 100,100 50,50" fill="%23A68DFD"/></svg>') no-repeat center center fixed;
+    background-size: cover;
     color: #343a40;
     line-height: 1.6;
     scroll-behavior: smooth;
@@ -33,10 +27,8 @@ body {
 }
 
 body {
-    animation: moveBackground 30s linear infinite;
+    animation: moveBackground 15s ease-in-out infinite;
 }
-
-
 
 /* Header Styling */
 header {
