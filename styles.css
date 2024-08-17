@@ -1,17 +1,21 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Animated Gradient Background */
+/* Geometric Gradient Background */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(120deg, #007bff, #4682B4, #87CEFA, #5DADE2);
-    background-size: 300% 300%;
-    animation: gradientBackground 15s ease infinite;
+    background: linear-gradient(135deg, #007bff 25%, transparent 25%) -50px 0,
+                linear-gradient(225deg, #007bff 25%, transparent 25%) -50px 0,
+                linear-gradient(315deg, #007bff 25%, transparent 25%),
+                linear-gradient(45deg, #007bff 25%, transparent 25%);
+    background-size: 100px 100px;
+    background-color: #4682B4;
     color: #343a40;
     line-height: 1.6;
     scroll-behavior: smooth;
+    background-blend-mode: overlay;
 }
 
 /* Gradient Animation Keyframes */
@@ -27,7 +31,7 @@ body {
     }
 }
 
-/* Overlay for Geometric Patterns */
+/* Overlay for Additional Geometric Pattern */
 body::before {
     content: "";
     position: absolute;
@@ -35,8 +39,10 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/geometric-pattern.png'); /* Replace with your pattern image */
-    opacity: 0.15; /* Adjust for more or less visibility */
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px),
+                      linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 100px 100px;
+    opacity: 0.1; /* Adjust for more or less visibility */
     pointer-events: none;
     z-index: -1;
 }
