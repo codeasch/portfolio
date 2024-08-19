@@ -177,6 +177,8 @@ section h2 {
 
 .skills-list li:hover {
     background-color: #7E76C9; /* Updated to match the palette */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Experience Section */
