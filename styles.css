@@ -166,10 +166,10 @@ section h2 {
     text-align: center;
 }
 
-.skills-list:hover {
+/* .skills-list:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
+} */
 
 .skills-list li {
     background-color: #8988FE; /* Updated to match the palette */
@@ -191,6 +191,11 @@ section h2 {
     border-radius: 8px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .experience-item h3 {
