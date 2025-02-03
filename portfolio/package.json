@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://codeasch.github.io/portfolio",
-
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,6 +12,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "framer-motion": "^12.0.11",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

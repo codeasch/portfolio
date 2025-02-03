@@ -1,20 +1,54 @@
-// src/Footer.jsx (you can also place this in src/components if you prefer)
+// src/Footer.jsx
 import React from 'react';
+import { motion } from 'framer-motion';
+import LinkedInLogo from '../assets/Logos/LinkedIn_logo_initials.png'
 
 export default function Footer() {
   return (
-    <footer>
-      <p>
+    <motion.footer
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      style={{
+        backgroundColor: '#1c1b29',
+        color: '#fff',
+        textAlign: 'center',
+        padding: '2rem',
+        boxShadow: '0 -2px 10px rgba(0, 0, 0, 0.5)',
+      }}
+    >
+      <p
+        style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '0.5rem',
+          margin: 0,
+          fontSize: '0.9rem',
+        }}
+      >
         <a
           href="https://www.linkedin.com/in/andrew-schulman-806607289"
           target="_blank"
           rel="noreferrer"
+          style={{
+            color: '#FFA726', // Orange accent
+            textDecoration: 'none',
+            fontWeight: '700',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.25rem',
+          }}
         >
-          <img src="/Logos/LinkedIn_logo_initials.png" alt="LinkedIn" />
+          <img
+            src={LinkedInLogo}
+            alt="LinkedIn"
+            style={{ width: '20px', height: '20px' }}
+          />
           LinkedIn
         </a>
-        {' '}| © 2024 Andrew Schulman
+        <span>| © 2024 Andrew Schulman</span>
       </p>
-    </footer>
+    </motion.footer>
   );
 }
