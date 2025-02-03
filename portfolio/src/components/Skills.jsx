@@ -2,15 +2,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-/*
-  We'll do a fade/slide animation for the entire Skills section,
-  then optionally animate each skill item with a subtle hover scale.
-*/
 const containerVariants = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.1, // each child animates in sequence
+      staggerChildren: 0.1,
     },
   },
 };
@@ -21,6 +17,15 @@ const skillItemVariants = {
 };
 
 export default function Skills() {
+  const skills = [
+    'Unreal Engine',
+    'Verse',
+    'Python',
+    'Marketing',
+    'Collaboration',
+    'Photoshop',
+  ];
+
   return (
     <motion.section
       id="skills"
@@ -29,7 +34,6 @@ export default function Skills() {
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
       style={{
-        /* Dark gradient background consistent with theme */
         background:
           'linear-gradient(135deg, rgba(94, 53, 177, 0.9) 0%, rgba(63, 81, 181, 0.9) 50%, rgba(255, 87, 34, 0.9) 100%)',
         padding: '2rem',
@@ -44,7 +48,7 @@ export default function Skills() {
         style={{
           fontSize: '2rem',
           marginBottom: '1.5rem',
-          color: '#FFD54F', // Gold accent
+          color: '#FFD54F',
           textAlign: 'center',
           textTransform: 'uppercase',
           letterSpacing: '1px',
@@ -53,9 +57,7 @@ export default function Skills() {
         Skills
       </h2>
 
-      {/* Container for the skills list, with staggered children animation */}
       <motion.ul
-        className="skills-list"
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
@@ -70,27 +72,18 @@ export default function Skills() {
           textAlign: 'center',
         }}
       >
-        {[
-          'Unreal Engine',
-          'Verse',
-          'Python',
-          'Marketing',
-          'Collaboration',
-          'Photoshop',
-          'React',
-          'UX',
-        ].map((skill, idx) => (
+        {skills.map((skill, idx) => (
           <motion.li
             key={idx}
             variants={skillItemVariants}
             whileHover={{ scale: 1.05 }}
             transition={{ type: 'spring', stiffness: 150 }}
             style={{
-              backgroundColor: '#3f51b5', // Blue accent
+              backgroundColor: '#3f51b5', // blue accent
               color: '#fff',
               padding: '0.75rem 1rem',
               borderRadius: '0.5rem',
-              fontWeight: '700',
+              fontWeight: 700,
               cursor: 'default',
             }}
           >

@@ -1,7 +1,6 @@
-// src/Footer.jsx
+// src/components/Footer.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import LinkedInLogo from '../assets/Logos/LinkedIn_logo_initials.png'
 
 export default function Footer() {
   return (
@@ -16,6 +15,7 @@ export default function Footer() {
         textAlign: 'center',
         padding: '2rem',
         boxShadow: '0 -2px 10px rgba(0, 0, 0, 0.5)',
+        marginTop: '2rem',
       }}
     >
       <p
@@ -32,7 +32,7 @@ export default function Footer() {
           target="_blank"
           rel="noreferrer"
           style={{
-            color: '#FFA726', // Orange accent
+            color: '#ffa726',
             textDecoration: 'none',
             fontWeight: '700',
             display: 'flex',
@@ -41,7 +41,7 @@ export default function Footer() {
           }}
         >
           <img
-            src={LinkedInLogo}
+            src="/Logos/LinkedIn_logo_initials.png"
             alt="LinkedIn"
             style={{ width: '20px', height: '20px' }}
           />

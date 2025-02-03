@@ -12,7 +12,6 @@ export default function Header() {
         position: 'sticky',
         top: 0,
         zIndex: 999,
-        /* Dark minimal gradient (purple -> deeper purple) */
         background: 'linear-gradient(90deg, #120e1b 0%, #3e0742 100%)',
         boxShadow: '0 2px 10px rgba(0, 0, 0, 0.7)',
         padding: '1rem 2rem',
@@ -21,13 +20,12 @@ export default function Header() {
         justifyContent: 'space-between',
       }}
     >
-      {/* Left side: Name/Logo */}
       <h1
         style={{
           fontSize: '2rem',
           margin: 0,
           fontWeight: 700,
-          color: '#FFD54F', // Gold accent
+          color: '#FFD54F', // gold accent
           letterSpacing: '1px',
           userSelect: 'none',
         }}
@@ -35,7 +33,6 @@ export default function Header() {
         Andrew Schulman
       </h1>
 
-      {/* Right side: Nav */}
       <nav>
         <ul
           style={{

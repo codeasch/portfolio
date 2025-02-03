@@ -11,7 +11,8 @@ export default function Experience() {
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
       style={{
-        background: 'linear-gradient(135deg, rgba(94, 53, 177, 0.9) 0%, rgba(63, 81, 181, 0.9) 50%, rgba(255, 87, 34, 0.9) 100%)',
+        background:
+          'linear-gradient(135deg, rgba(94, 53, 177, 0.9) 0%, rgba(63, 81, 181, 0.9) 50%, rgba(255, 87, 34, 0.9) 100%)',
         padding: '2rem',
         borderRadius: '1rem',
         color: '#fff',
@@ -24,7 +25,7 @@ export default function Experience() {
         style={{
           fontSize: '2rem',
           marginBottom: '1.5rem',
-          color: '#FFD54F', // Gold accent
+          color: '#FFD54F',
           textAlign: 'center',
           textTransform: 'uppercase',
           letterSpacing: '1px',
@@ -33,7 +34,6 @@ export default function Experience() {
         Experience
       </h2>
 
-      {/* Wrapper for experience items if you want more than one */}
       <div
         style={{
           display: 'grid',
@@ -53,12 +53,12 @@ export default function Experience() {
         >
           <h3
             style={{
-              color: '#ffa726', // Vibrant orange accent
+              color: '#ffa726', // orange accent
               fontSize: '1.5rem',
               marginBottom: '0.5rem',
             }}
           >
-            Founder &amp; Lead Developer - YapMaps
+            Founder & Lead Developer - YapMaps
           </h3>
           <p
             style={{
@@ -73,9 +73,7 @@ export default function Experience() {
           </p>
         </motion.div>
 
-        {/*
-          Add more <motion.div> blocks here for additional experience items, if desired
-        */}
+        {/* Add more <motion.div> blocks if you have more experience items */}
       </div>
     </motion.section>
   );

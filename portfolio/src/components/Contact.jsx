@@ -11,8 +11,8 @@ export default function Contact() {
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
       style={{
-        /* Matching gradient background with the dark theme (purple->blue->orange) */
-        background: 'linear-gradient(135deg, rgba(94, 53, 177, 0.9) 0%, rgba(63, 81, 181, 0.9) 50%, rgba(255, 87, 34, 0.9) 100%)',
+        background:
+          'linear-gradient(135deg, rgba(94, 53, 177, 0.9) 0%, rgba(63, 81, 181, 0.9) 50%, rgba(255, 87, 34, 0.9) 100%)',
         padding: '2rem',
         borderRadius: '1rem',
         color: '#fff',
@@ -24,8 +24,8 @@ export default function Contact() {
       <h2
         style={{
           fontSize: '2rem',
-          marginBottom: '1rem',
-          color: '#FFD54F', // Gold-ish accent
+          marginBottom: '1.5rem',
+          color: '#FFD54F', // gold accent
           textAlign: 'center',
           textTransform: 'uppercase',
           letterSpacing: '1px',
@@ -53,7 +53,6 @@ export default function Contact() {
           andrew@yapmaps.com
         </a>
       </p>
-
       <p
         style={{
           textAlign: 'center',

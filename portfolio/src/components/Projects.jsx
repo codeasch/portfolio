@@ -4,17 +4,15 @@ import { motion } from 'framer-motion';
 import YapMapsLogo from '../assets/Logos/YapMapsLogo.jpg';
 import CookingProject from '../assets/Projects/blank-recipe-book-different-ingredients-600nw-2009453615.png';
 
-// Parent container animation controls how child cards (projects) will stagger in
 const containerVariants = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.2, // each child animates 0.2s after the previous
+      staggerChildren: 0.2,
     },
   },
 };
 
-// Each project card's individual animation
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0 },
@@ -24,14 +22,13 @@ export default function Projects() {
   return (
     <motion.section
       id="projects"
-      /* The section itself fades in and slides up on scroll */
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
       style={{
-        /* Similar gradient used in other sections: purple->blue->orange */
-        background: 'linear-gradient(135deg, rgba(94, 53, 177, 0.9) 0%, rgba(63, 81, 181, 0.9) 50%, rgba(255, 87, 34, 0.9) 100%)',
+        background:
+          'linear-gradient(135deg, rgba(94, 53, 177, 0.9) 0%, rgba(63, 81, 181, 0.9) 50%, rgba(255, 87, 34, 0.9) 100%)',
         padding: '2rem',
         borderRadius: '1rem',
         color: '#fff',
@@ -44,7 +41,7 @@ export default function Projects() {
         style={{
           fontSize: '2rem',
           marginBottom: '1.5rem',
-          color: '#FFD54F', // Gold accent
+          color: '#FFD54F',
           textAlign: 'center',
           textTransform: 'uppercase',
           letterSpacing: '1px',
@@ -53,9 +50,8 @@ export default function Projects() {
         Projects
       </h2>
 
-      {/* Parent container for the cards, with staggered child animations */}
+      {/* Container for project cards */}
       <motion.div
-        className="project-grid"
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
@@ -67,9 +63,8 @@ export default function Projects() {
           justifyContent: 'center',
         }}
       >
-        {/* ======== CARD 1: YapMaps ======== */}
+        {/* Card 1 */}
         <motion.div
-          className="project-card"
           variants={cardVariants}
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
@@ -86,7 +81,7 @@ export default function Projects() {
         >
           <h3
             style={{
-              color: '#ffa726', // Orange accent for project title
+              color: '#ffa726',
               fontSize: '1.5rem',
               marginBottom: '1rem',
             }}
@@ -112,14 +107,12 @@ export default function Projects() {
               maxWidth: '100%',
               height: 'auto',
               borderRadius: '0.75rem',
-              marginTop: '1rem',
             }}
           />
         </motion.div>
 
-        {/* ======== CARD 2: AI Recipe Creator ======== */}
+        {/* Card 2 */}
         <motion.div
-          className="project-card"
           variants={cardVariants}
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
@@ -161,7 +154,6 @@ export default function Projects() {
               maxWidth: '100%',
               height: 'auto',
               borderRadius: '0.75rem',
-              marginTop: '1rem',
             }}
           />
         </motion.div>
