@@ -6,7 +6,7 @@ export default function About() {
     <section id="about">
       <h2>About Me</h2>
       <p>
-        Hello! I'm Andrew Schulman, a senior at Vernon Hills High School with a strong passion 
+        Hello!!!!!!!!!!!!!!!!!!!!!!! I'm Andrew Schulman, a senior at Vernon Hills High School with a strong passion 
         for computer science and game development. I have completed courses in AP CS Principles, 
         AP CS A, iOS App Development, and I am currently enrolled in Advanced Topics in Computer Science. 
         In my spare time, I run YapMaps, a business that develops video games in Unreal Engine, 
