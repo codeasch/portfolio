@@ -1,65 +1,75 @@
-/* =============================
-   Global Styles (Dark Theme)
-   ============================= */
+@import "tailwindcss";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-/*
-  Dark Polygon Background
-  Purple, Orange, & Blue Tones
-*/
+/* Body */
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    /* Darker polygons (purple->orange->blue) */
-    background: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" preserveAspectRatio=\"none\"><polygon points=\"0,0 100,0 50,50\" fill=\"%2344337A\"/><polygon points=\"0,0 50,50 0,100\" fill=\"%233A2B5D\"/><polygon points=\"100,0 100,100 50,50\" fill=\"%23EB7600\"/><polygon points=\"0,100 100,100 50,50\" fill=\"%2328325B\"/></svg>')
-        no-repeat center center fixed;
-    background-size: cover;
-    color: #fafafa; /* Light text for dark background */
-    line-height: 1.6;
+  @apply bg-gray-900 text-white;
+}
+
+/* Gradient Text */
+.text-primary {
+  @apply text-purple-400;
+}
+
+.text-secondary {
+  @apply text-blue-400;
+}
+
+.text-accent {
+  @apply text-orange-400;
+}
+
+/* Animations */
+.shadow-md {
+  transition: transform 0.3s ease-in-out;
+}
+.shadow-md:hover {
+  transform: scale(1.05);
+}
+
+/* Moving Gradient Background */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .animate-gradient {
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+  }
+  
+  /* Smooth Scrolling */
+  html {
     scroll-behavior: smooth;
-}
+  }
 
-@keyframes moveBackground {
-    0% {
-        background-position: 0% 0%;
-    }
-    50% {
-        background-position: 100% 100%;
-    }
-    100% {
-        background-position: 0% 0%;
-    }
-}
-
-/* Subtle slow animation for background movement */
-body {
-    animation: moveBackground 25s ease-in-out infinite;
-}
-
-/* =============================
-   Section
-   ============================= */
-section {
-    background-color: rgba(20, 20, 30, 0.9);
-    border-radius: 1rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    margin: 4rem auto;
-    max-width: 1000px;
-    padding: 3rem 2rem;
-    position: relative;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-section.active {
-    opacity: 1;
-    transform: translateY(0);
-}
+/* Custom Scrollbar - Subtle & Clean */
+::-webkit-scrollbar {
+    width: 8px; /* Slim scrollbar */
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #10131a; /* Dark track to blend with background */
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #444857; /* Soft gray for a clean look */
+    border-radius: 10px;
+    transition: background 0.3s ease;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #636870; /* Slightly lighter on hover */
+  }
+  
+  /* For Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #444857 #10131a;
+  }
+  
